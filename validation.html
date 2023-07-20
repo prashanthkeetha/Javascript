@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  
+</head>
+
+<body>
+  <form>
+    <p><input id="name" type="text" name="" placeholder="Your Full Name"></p>
+    <p><input id="mail" type="email" name="email" placeholder="Your Email-Id"></p>
+    <p><input id="pass" type="password" name="password" placeholder="password"></p>
+    <p><input id="cpass" type="password" name="confirmpassword" placeholder="confirmpassword"></p>
+    <button type="button" onclick="fun()">Submit</button>
+  </form>
+</body>
+
+</html>
+
+<script>
+    function fun() {
+
+     
+      var nameInput = document.getElementById("name").value;
+      var emailInput = document.getElementById("mail").value;
+      var password = document.getElementById("pass").value;
+      var confirmpassword= document.getElementById("cpass").value;
+      
+      if(nameInput=='' || emailInput=='' || password=='' || confirmpassword=='' ){
+      alert("Please fill the all fields before submit");
+      return;
+      }
+
+      var nameRegex = /^[A-Za-z\s]+$/;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var passwordRegex = /^[\A-Za-z0-9/]+$/;
+      var confirmpasswordRegex = /^[\A-Za-z0-9/]+$/;
+
+      if (!nameRegex.test(nameInput)) {
+        alert("Name should only contain alphabets and spaces.");
+        return;
+      }
+
+      if (!emailRegex.test(emailInput)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      if (!passwordRegex.test(password)) {
+        alert("Password should contain alphabets, numbers, and special characters.");
+        return;
+      }
+    
+     
+      if (password==confirmpassword){
+        alert("valid password!");
+
+      }else{
+        alert("Invalid password!");
+      }
+
+      alert("All validations passed!");
+      // Continue with form submission or other actions
+    }
+  </script>
