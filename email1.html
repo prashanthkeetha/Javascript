@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>
+        email verification using js
+    </title>
+    <link rel="stylesheet" href="email.css" type="text/css" />
+    <script>
+        function ValidateEmail(input) {
+            let validReg = /^.+@.+\..+$#/; // Updated regular expression for email validation
+            if (input.value.match(validReg)) {
+                alert("Valid email address!");
+                document.form1.text1.focus();
+                return true;
+            } else {
+                alert("Invalid email address!");
+                document.form1.text1.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="mail">
+        <form name="form1" action="#">
+            <ul>
+                <li><input type="text" name="text1" /></li>
+                <li>&nbsp;</li>
+                <li class="validate">
+                    <input
+                        type="submit"
+                        name="validate"
+                        value="Validate"
+                        onclick="return ValidateEmail(document.form1.text1);" <!-- Added "return" keyword -->
+                    />
+                </li>
+                <li>&nbsp;</li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>
