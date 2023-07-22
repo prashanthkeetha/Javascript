@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Operations</title>
+</head>
+<body>
+  <h1>Arithmetic Operations</h1>
+  <p>Value of a: <span id="valueA">20</span></p>
+  <p>Value of b: <span id="valueB">15</span></p>
+  <p>Result:</p>
+  <div id="arthematicoperationId"></div>
+
+  <button onclick="changeOperation()">Change Operation</button>
+
+  <script>
+    // Get the values of a and b
+    let a = 20;
+    let b = 15;
+
+    // Initialize the operation
+    let operation = "addition";
+
+    // Function to change the operation
+    function changeOperation() {
+      let operations = ["addition", "subtraction", "multiplication"];
+      let currentIndex = operations.indexOf(operation);
+      let nextIndex = (currentIndex + 1) % operations.length;
+      operation = operations[nextIndex];
+      computeResult();
+    }
+
+    // Function to compute the results based on the current operation
+    function computeResult() {
+      let addition = a + b;
+      let subtraction = a - b;
+      let multiplication = a * b;
+      let resultElement = document.getElementById("arthematicoperationId");
+      let result;
+
+      if (operation === "addition") {
+        result = addition;
+      } else if (operation === "subtraction") {
+        result = subtraction;
+      } else if (operation === "multiplication") {
+        result = multiplication;
+      }
+
+      resultElement.innerHTML = `<p>${result}</p>`;
+    }
+
+    // Initial computation on page load
+    computeResult();
+  </script>
+</body>
+</html>
