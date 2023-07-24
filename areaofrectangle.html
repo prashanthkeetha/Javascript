@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AreaOfrectangle</title>
+</head>
+<body>
+    <input type = "number" id = "width" placeholder = "Enter the width">
+    <input type = "number" id = "length" placeholder ="Enter the length">
+    <button onclick = "rectangle()">onclick</button>
+</body>
+</html>
+
+<script>
+    function rectangle(){
+    var width = parseFloat(document.getElementById("width").value);
+    var length = parseFloat(document.getElementById("length").value);
+
+    var ans = width*length;
+
+    alert(ans);
+}
+</script>

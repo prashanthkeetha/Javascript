@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shapes Area Calculator</title>
+</head>
+<body>
+  <form>
+    <p><input type="number" id="radius" placeholder="Radius of circle"></p>
+    <p><input type="number" id="width" placeholder="Width of rectangle"></p>
+    <p><input type="number" id="length" placeholder="Length of rectangle"></p>
+    <p><input type="number" id="base" placeholder="Base of triangle"></p>
+    <p><input type="number" id="height" placeholder="Height of triangle"></p>
+    <button type="button" onclick="calculateCircleArea()">Calculate Circle Area</button>
+    <button type="button" onclick="calculateRectangleArea()">Calculate Rectangle Area</button>
+    <button type="button" onclick="calculateTriangleArea()">Calculate Triangle Area</button>
+  </form>
+
+  <script>
+    function calculateCircleArea() {
+      var radius = parseFloat(document.getElementById("radius").value);
+
+      if (isNaN(radius)) {
+        alert("Please enter a valid radius.");
+        return;
+      }
+
+      var circleArea = Math.PI * radius ** 2;
+      alert("Area of Circle: " + circleArea.toFixed(2));
+    }
+
+    function calculateRectangleArea() {
+      var width = parseFloat(document.getElementById("width").value);
+      var length = parseFloat(document.getElementById("length").value);
+
+      if (isNaN(width) || isNaN(length)) {
+        alert("Please enter valid width and length.");
+        return;
+      }
+
+      var rectangleArea = width * length;
+      alert("Area of Rectangle: " + rectangleArea.toFixed(2));
+    }
+
+    function calculateTriangleArea() {
+      var base = parseFloat(document.getElementById("base").value);
+      var height = parseFloat(document.getElementById("height").value);
+
+      if (isNaN(base) || isNaN(height)) {
+        alert("Please enter valid base and height.");
+        return;
+      }
+
+      var triangleArea = (base * height) / 2;
+      alert("Area of Triangle: " + triangleArea.toFixed(2));
+    }
+  </script>
+</body>
+</html>

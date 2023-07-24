@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AreaOftriangle</title>
+</head>
+<body>
+    <input type = "number" id = "base" placeholder = "Enter the base">
+    <input type = "number" id = "height" placeholder ="Enter the height">
+    <button onclick = "triangle()">onclick</button>
+</body>
+</html>
+
+<script>
+    function triangle(){
+    var b = parseFloat(document.getElementById("base").value);
+    var h = parseFloat(document.getElementById("height").value);
+
+    var ans = (b*h)/2;
+
+    alert(ans);
+}
+</script>

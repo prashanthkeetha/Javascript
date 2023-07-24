@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AreaOfCRT</title>
+    </head>
+    <body>
+        <form>
+        <p><input type="number" id="Diameter" placeholder="radiusofcircle"></p>;
+        <p><input type="number" id="width" placeholder="width" ></p>;
+        <p><input type="number" id="length" placeholder="length"></p>
+        <p><input type= "number" id="base"  placeholder="base"></p>;
+        <p><input type="number" id="height" placeholder="height"></p>
+        <button type="button" onclick="CRT()">values</button>
+        </form>
+    </body>
+
+</html>
+<script>
+    function CRT(){
+        var circle=parseFloat(document.getElementById("Diameter").value);
+        var rectangleWidth=parseFloat(document.getElementById("width").value);
+        var rectangleLength=parseFloat(document.getElementById("length").value);
+        var triangleBase=parseFloat(document.getElementById("base").value);
+        var triangleHeight=parseFloat(document.getElementById("height").value);
+
+        var circle = A=hb*b/2;
+        var rectangleArea= rectangleWidth*rectangleLength;
+        var triangleArea= (triangleBase*triangleHeight)/2;
+
+        var result = 'circle:${circle}';
+        var result = 'rectangle:${rectangleArea}';
+        var result = 'triangle:${triangleArea}';
+        alert(result);
+
+
+    }
+
+</script>
