@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AreaOfCircle</title>
+</head>
+<body>
+    <input type="number" id="Diameter" placeholder="Enter the Diameter">
+    <button onclick="circle()">onClick</button>
+    <canvas id="circlecanvas" height="100" width="200" style="border: 3px solid #bbbbbb;"></canvas>
+
+    <script>
+        function circle() {
+            var d = parseFloat(document.getElementById("Diameter").value);
+            var radius = d / 2;
+            var ans = Math.PI * radius ** 2;
+            CircleOnCanvas(radius);
+            alert(ans);
+        }
+
+        function CircleOnCanvas(radius) {
+            var canvas = document.getElementById("circlecanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(100, 50, radius, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+    </script>
+</body>
+</html>

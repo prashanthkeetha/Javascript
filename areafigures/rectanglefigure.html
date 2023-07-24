@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AreaOfRectangle</title>
+</head>
+<body>
+
+    <h2>Rectangle:</h2>
+    <input type="number" id="width" placeholder="Enter the width">
+    <input type="number" id="height" placeholder="Enter the height">
+    <button onclick="drawRectangle()">Draw Rectangle</button>
+    <canvas id="rectanglecanvas" height="100" width="200" style="border: 3px solid #bbbbbb;"></canvas>
+
+    <script>
+
+        function drawRectangle() {
+            var width = parseFloat(document.getElementById("width").value);
+            var height = parseFloat(document.getElementById("height").value); 
+            var ans = width * height;
+            drawRectangleOnCanvas(width, height); 
+            alert(ans);
+        }
+
+        function drawRectangleOnCanvas(width, height) {
+            var canvas = document.getElementById("rectanglecanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.strokeRect(50, 25, width, height);
+        }
+    </script>
+</body>
+</html>

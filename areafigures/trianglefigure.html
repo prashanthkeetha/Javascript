@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AreaOftriangle</title>
+</head>
+<body>
+    <input type="number" id="base" placeholder="Enter the base">
+    <input type="number" id="height" placeholder="Enter the height">
+    <button onclick="triangle()">Calculate Area</button>
+    <canvas id="trianglecanvas" height="200" width="300" style="border: 3px solid #bbbbbb;"></canvas>
+
+    <script>
+        function triangle() {
+            var canvas = document.getElementById("trianglecanvas");
+            var ctx = canvas.getContext("2d");
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            var b = parseFloat(document.getElementById("base").value);
+            var h = parseFloat(document.getElementById("height").value);
+
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, canvas.height - h); // Move to the bottom-center of the canvas
+            ctx.lineTo(canvas.width / 2 + b / 2, canvas.height); // Draw line to the right-bottom vertex
+            ctx.lineTo(canvas.width / 2 - b / 2, canvas.height); // Draw line to the left-bottom vertex
+            ctx.closePath();
+
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#666666";
+            ctx.stroke();
+
+            var ans = (b * h) / 2;
+
+            alert(ans);
+        }
+    </script>
+</body>
+</html>
