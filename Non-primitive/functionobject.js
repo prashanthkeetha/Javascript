@@ -7,3 +7,5 @@ const myObj = {
 };
 
 myObj.greet();
+
+//output:Hello, my name is ibdigital and I am 5 years old.

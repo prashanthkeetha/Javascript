@@ -13,4 +13,5 @@ const personPrototype = {
   person1.greet();
   person2.greet();
   
-
+//output:Hello, my name is India
+//Hello, my name is Telangana

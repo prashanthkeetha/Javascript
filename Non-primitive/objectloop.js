@@ -13,3 +13,6 @@ if (typeof myObj === 'object' && myObj.hasOwnProperty('name')) {
 }
 
 myObj.greet();
+/*output:
+ibdigital
+Hello, my name is ibdigital and I am 5 years old.*/

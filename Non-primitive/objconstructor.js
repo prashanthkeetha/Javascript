@@ -6,3 +6,4 @@ function Person() {
 
 let subhashchandrabose = new Person();
 console.log(subhashchandrabose.country + " " + subhashchandrabose.state + " " + subhashchandrabose.Army);
+//output:India West Bengal Azad Hind

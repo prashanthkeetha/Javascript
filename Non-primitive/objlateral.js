@@ -10,5 +10,8 @@ console.log(obj.Person.gender);
 console.log(typeof obj);
 console.log(obj);
 
-// const lib={id:"India",state:"telangana",city:"hyderabad"};
-// console.log(lib.id+" "+lib.state+" "+lib.city)
+/*output:
+prashanth
+male
+object
+{ Person: { name: 'prashanth', gender: 'male' } }*/
