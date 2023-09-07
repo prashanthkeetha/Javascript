@@ -50,4 +50,16 @@ let leg = ++arm;
 console.log(leg);
 //OUTPUT:
 11*/
+/********************MEMORY TYPES**********************/
+/*STACK MEMORY: IT is used by the primitive datatype
+=>In the stack we will get the copy of the data which we changes.
+EG:*/
+//--
+// let prashanth = "varma"
+// let nani = prashanth
+// nithin = "sai"
+// console.log(nani);
+// console.log(nithin);
+/*HEAP MEMORY: IT is used by the Non-primitive datatypes
+=> In the heap the data which chnages will change completely in the code*/
 
