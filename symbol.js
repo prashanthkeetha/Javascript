@@ -23,5 +23,5 @@ var RUN = Symbol();
 place[RUN] = function() {
   return 'finacial captial';
 };
-console.log(typeof place[RUN]());
+console.log(place[RUN]());
 
