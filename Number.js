@@ -77,3 +77,34 @@ EG:*/
 [Number: 500]
 3
 400.0*/
+// MATH => It is a Namespace Object contains static properties and methods for mathematical constants and functions.
+//->Math works with the Number type.it doesn't work with BigInt.
+//eg:
+console.log(Math.abs(-4));
+//output: 4
+//By using this abs(absolute)we can convert the negative value into positive but we cannot change positive value into negative.
+//-->By using (round) the decimal value convert into roundfigure .
+//-->by using (ceil) the decimal value make it to the uppercase .
+//-->By using (floor) the decimal value it will make to lower value.
+//-->here we have max and min value by using this we can get the max and min values in the number.
+//-->By using Random we get the random numbers by using max and min with the floor we can run the random.
+//eg:
+console.log(Math.round(4.7));
+console.log(Math.ceil(4.1));
+console.log(Math.floor(4.8));
+console.log(Math.random());
+console.log(Math.random()*15)
+console.log(Math.ceil(Math.random()*15 ) + 1);
+const max = 10;
+const min = 8;
+console.log(Math.floor(Math.random()*(max+min))+min)
+/*outputs:
+Round:5
+ceil:5
+floor:4
+rondam: 
+0.6943104023364279
+1.8904198215318235
+10
+13
+*/
